@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Your Name — Portfolio</title>
+<meta name="description" content="Portfolio of Your Name — projects, writing, and contact." />
+<meta property="og:title" content="Your Name — Portfolio" />
+<meta property="og:description" content="A selection of projects and work by Your Name." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="/favicon.ico" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+
+<style>
+:root{
+--bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#7c3aed; --glass: rgba(255,255,255,0.04);
+--max-w:1100px; --gap:24px; --radius:12px; --ff: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, 'Helvetica Neue', Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+margin:0; font-family:var(--ff); background:linear-gradient(180deg,#071024 0%,var(--bg) 100%); color:#e6eef8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+line-height:1.5; padding:40px 20px;
+}
+.container{max-width:var(--max-w); margin:0 auto;}
+
+
+/* Header */
+header{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:34px}
+.brand{display:flex; align-items:center; gap:12px}
+.logo{width:44px; height:44px; border-radius:10px; background:linear-gradient(135deg,var(--accent),#06b6d4); display:flex; align-items:center; justify-content:center; font-weight:700}
+nav{display:flex; gap:14px}
+nav a{color:var(--muted); text-decoration:none; font-weight:600}
+nav a:hover{color:var(--accent)}
+
+
+/* Hero */
+.hero{display:grid; grid-template-columns:1fr 340px; gap:var(--gap); align-items:start; margin-bottom:32px}
+.intro{padding:28px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:var(--radius); box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+h1{margin:0 0 8px; font-size:clamp(28px,4vw,40px)}
+p.lead{margin:0 0 18px; color:var(--muted)}
+.cta{display:flex; gap:12px}
+.btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:700}
+.btn-primary{background:linear-gradient(90deg,var(--accent),#06b6d4); color:white}
+.btn-ghost{background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.04)}
+
+
+/* Side card */
+.side-card{padding:18px; background:var(--card); border-radius:12px}
+.avatar{width:100%; height:220px; border-radius:8px; background:linear-gradient(180deg,#122032,#0b1622); display:flex; align-items:center; justify-content:center; color:var(--muted)}
+.meta{display:flex; gap:8px; margin-top:12px; justify-content:space-between}
+
+
+/* Projects */
+section.projects{margin-bottom:32px}
+.projects-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px}
+.card{background:var(--card); padding:14px; border-radius:12px; box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+.card img{width:100%; height:140px; object-fit:cover; border-radius:8px; display:block}
+.card h3{margin:10px 0 6px; font-size:16px}
+.card p{margin:0; color:var(--muted); font-size:14px}
+.tags{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap}
+.tag{padding:6px 8px; background:var(--glass); border-radius:8px; font-weight:600; font-size:12px}
+
+
+/* About + Skills */
+.two-col{display:grid; grid-template-columns:1fr 320px; gap:var(--gap); margin-bottom:32px}
+.skills{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005)); padding:18px; border-radius:12px}
+.skill-list{display:flex; gap:8px; flex-wrap:wrap}
+
+
+/* Contact */
+.contact-form{display:grid; gap:10px}
+input, textarea{width:100%; padding:10px; border-radius:8px; background:transparent; border:1px solid rgba(255,255,255,0.04); color:inherit}
+
+
+footer{margin-top:48px; color:var(--muted); text-align:center}
+
+
+/* Responsive */
+@media (max-width:880px){
+.hero{grid-template-columns:1fr}
+.two-col{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+
+<header>
+<div class="brand">
+<div class="logo">YN</div>
+<div>
+<div style="font-weight:800">Your Name</div>
+<div style="font-size:13px;color:var(--muted)">Product Designer / Developer</div>
+</div>
+</div>
+
+
+<nav aria-label="Main navigation">
+<a href="#projects">Projects</a>
+<a href="#about">About</a>
+<a href="#writing">Writing</a>
+<a href="#contact">Contact</a>
+<a class="btn btn-ghost" href="/resume.pdf" download>Resume</a>
+</nav>
+</header>
+
+
+<main>
+</html>
