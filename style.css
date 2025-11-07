@@ -1,167 +1,206 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Your Name — Portfolio</title>
-  <meta name="description" content="Portfolio of Your Name — projects, writing, and contact." />
-  <meta property="og:title" content="Your Name — Portfolio" />
-  <meta property="og:description" content="A selection of projects and work by Your Name." />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="/favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
+/* ---------- Portfolio Website Styles ---------- */
 
-    <header>
-      <div class="brand">
-        <div class="logo">YN</div>
-        <div>
-          <div style="font-weight:800">Your Name</div>
-          <div style="font-size:13px;color:var(--muted)">Product Designer / Developer</div>
-        </div>
-      </div>
+:root {
+  --accent: #0077ff;
+  --text: #222;
+  --bg: #ffffff;
+  --muted: #666;
+  --light: #f5f5f5;
+}
 
-      <nav aria-label="Main navigation">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#writing">Writing</a>
-        <a href="#contact">Contact</a>
-        <a class="btn btn-ghost" href="/resume.pdf" download>Resume</a>
-      </nav>
-    </header>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
 
-    <main>
-      <section class="hero fade-in">
-        <div class="intro">
-          <h1>Hi — I’m Your Name.</h1>
-          <p class="lead">I build elegant, usable web products and visual experiments. I design interactions, ship frontend code, and write about design systems.</p>
-          <div class="cta">
-            <a class="btn btn-primary" href="#projects">See projects</a>
-            <a class="btn btn-ghost" href="#contact">Work together</a>
-          </div>
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
 
-          <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap">
-            <div style="background:var(--glass); padding:10px 12px; border-radius:10px; font-weight:700">Tokyo — Remote</div>
-            <div style="color:var(--muted); padding:10px 12px; border-radius:10px; background:transparent">Available for contract</div>
-          </div>
-        </div>
+header {
+  background: var(--light);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
+}
 
-        <aside class="side-card fade-in">
-          <div class="avatar">Your portrait or art</div>
-          <div class="meta">
-            <div>
-              <div style="font-weight:800">Open to hire</div>
-              <div style="font-size:13px;color:var(--muted)">Freelance / Full-time</div>
-            </div>
-            <div style="text-align:right">
-              <div style="font-weight:800">5+</div>
-              <div style="font-size:13px;color:var(--muted)">Years experience</div>
-            </div>
-          </div>
-        </aside>
-      </section>
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
-      <section id="projects" class="projects container fade-in">
-        <h2 style="margin-bottom:12px">Selected projects</h2>
-        <div class="projects-grid">
-          <article class="card">
-            <img src="https://via.placeholder.com/800x450.png?text=Project+1" alt="Screenshot of Project 1">
-            <h3>Project One — Small web app</h3>
-            <p>A short description of the project — what it does and why it matters.</p>
-            <div class="tags">
-              <div class="tag">React</div>
-              <div class="tag">Node</div>
-              <div class="tag">Accessibility</div>
-            </div>
-            <div style="margin-top:12px; display:flex; gap:8px">
-              <a class="btn btn-ghost" href="#" aria-label="Open project">Live</a>
-              <a class="btn btn-ghost" href="#" aria-label="Open source code">Code</a>
-            </div>
-          </article>
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
 
-          <article class="card">
-            <img src="https://via.placeholder.com/800x450.png?text=Project+2" alt="Screenshot of Project 2">
-            <h3>Project Two — Design system</h3>
-            <p>Design tokens, components and documentation site for an internal product.</p>
-            <div class="tags"><div class="tag">Design</div><div class="tag">Figma</div></div>
-            <div style="margin-top:12px; display:flex; gap:8px">
-              <a class="btn btn-ghost" href="#">Case study</a>
-              <a class="btn btn-ghost" href="#">Code</a>
-            </div>
-          </article>
-        </div>
-      </section>
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
 
-      <section id="about" class="two-col container fade-in">
-        <div>
-          <h2>About</h2>
-          <p style="color:var(--muted)">I’m a designer-developer focused on product experiences, accessibility and scalable frontends. I enjoy pairing lean design with robust engineering and shipping complete features end-to-end.</p>
-          <h3 style="margin-top:18px">Process</h3>
-          <ol style="color:var(--muted)">
-            <li>Research & discovery</li>
-            <li>Sketches & low-fi prototypes</li>
-            <li>Component-driven implementation</li>
-            <li>Accessibility & performance tuning</li>
-          </ol>
-        </div>
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
 
-        <aside class="skills">
-          <h3>Skills</h3>
-          <div class="skill-list" style="margin-top:10px">
-            <div class="tag">HTML</div>
-            <div class="tag">CSS</div>
-            <div class="tag">JavaScript</div>
-            <div class="tag">React</div>
-            <div class="tag">Figma</div>
-            <div class="tag">TypeScript</div>
-            <div class="tag">Node</div>
-          </div>
-          <h3 style="margin-top:16px">Stats</h3>
-          <div style="color:var(--muted); font-size:13px">Built and maintained 8 production apps; contributor to 4 open-source packages.</div>
-        </aside>
-      </section>
+.nav-links a:hover {
+  color: var(--accent);
+}
 
-      <section id="writing" class="container fade-in">
-        <h2>Writing & thoughts</h2>
-        <p style="color:var(--muted)">Short excerpts or links to essays, case studies, or a blog. Use this space to link to longer case studies or an external blog.</p>
-        <ul style="color:var(--muted)">
-          <li><a href="#">On building accessible design systems</a></li>
-          <li><a href="#">Performance patterns I rely on</a></li>
-        </ul>
-      </section>
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(to bottom, #fafafa, #fff);
+}
 
-      <section id="contact" class="container fade-in">
-        <h2>Contact</h2>
-        <p style="color:var(--muted)">I’m available for freelance and full-time roles. Say hello — I reply within a few days.</p>
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
 
-        <form class="contact-form" action="mailto:youremail@example.com" method="post" enctype="text/plain">
-          <input type="text" name="name" placeholder="Your name" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <textarea name="message" rows="6" placeholder="Tell me about the project..." required></textarea>
-          <div style="display:flex; gap:12px">
-            <button type="submit" class="btn btn-primary">Send</button>
-            <a class="btn btn-ghost" href="mailto:youremail@example.com">Email me</a>
-          </div>
-        </form>
-      </section>
+.hero-content p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: var(--muted);
+}
 
-    </main>
+.accent {
+  color: var(--accent);
+}
 
-    <footer>
-      <div class="container">
-        <div style="margin-bottom:8px">© {new Date().getFullYear()} Your Name</div>
-        <div style="color:var(--muted); font-size:13px">Built with ❤️ — hosted on GitHub Pages</div>
-      </div>
-    </footer>
-  </div>
+.btn, .btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
 
-  <script>
-    document.querySelectorAll('footer').forEach(f=>{
-      f.innerHTML = f.innerHTML.replace('{new Date().getFullYear()}', new Date().getFullYear())
-    });
-  </script>
-</body>
-</html>
+.btn {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn:hover {
+  background: #005ed1;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.btn-secondary:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.about, .projects, .contact {
+  text-align: center;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 1rem auto;
+  color: var(--muted);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  width: fit-content;
+  align-self: center;
+}
+
+footer {
+  background: var(--light);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  border-top: 1px solid #ddd;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
