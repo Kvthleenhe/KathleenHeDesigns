@@ -1,238 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Name — Portfolio</title>
-  <meta name="description" content="Portfolio of Your Name — projects, writing, and contact." />
-  <meta property="og:title" content="Your Name — Portfolio" />
-  <meta property="og:description" content="A selection of projects and work by Your Name." />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="/favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#FFC5D3; --glass: rgba(255,255,255,0.04);
-      --max-w:1100px; --gap:24px; --radius:12px; --ff: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, 'Helvetica Neue', Arial;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family:var(--ff); background:linear-gradient(180deg,#071024 0%,var(--bg) 100%); color:#e6eef8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-      line-height:1.5; padding:40px 20px;
-    }
-    .container{max-width:var(--max-w); margin:0 auto;}
-
-    /* Header */
-    header{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:34px}
-    .brand{display:flex; align-items:center; gap:12px}
-    .logo{width:44px; height:44px; border-radius:10px; background:linear-gradient(135deg,var(--accent),#06b6d4); display:flex; align-items:center; justify-content:center; font-weight:700}
-    nav{display:flex; gap:14px}
-    nav a{color:var(--muted); text-decoration:none; font-weight:600}
-    nav a:hover{color:var(--accent)}
-
-    /* Hero */
-    .hero{display:grid; grid-template-columns:1fr 340px; gap:var(--gap); align-items:start; margin-bottom:32px}
-    .intro{padding:28px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:var(--radius); box-shadow:0 6px 20px rgba(2,6,23,0.6)}
-    h1{margin:0 0 8px; font-size:clamp(28px,4vw,40px)}
-    p.lead{margin:0 0 18px; color:var(--muted)}
-    .cta{display:flex; gap:12px}
-    .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:700}
-    .btn-primary{background:linear-gradient(90deg,var(--accent),#06b6d4); color:white}
-    .btn-ghost{background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.04)}
-
-    /* Side card */
-    .side-card{padding:18px; background:var(--card); border-radius:12px}
-    .avatar{width:100%; height:220px; border-radius:8px; background:linear-gradient(180deg,#122032,#0b1622); display:flex; align-items:center; justify-content:center; color:var(--muted)}
-    .meta{display:flex; gap:8px; margin-top:12px; justify-content:space-between}
-
-    /* Projects */
-    section.projects{margin-bottom:32px}
-    .projects-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px}
-    .card{background:var(--card); padding:14px; border-radius:12px; box-shadow:0 6px 18px rgba(2,6,23,0.6)}
-    .card img{width:100%; height:140px; object-fit:cover; border-radius:8px; display:block}
-    .card h3{margin:10px 0 6px; font-size:16px}
-    .card p{margin:0; color:var(--muted); font-size:14px}
-    .tags{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap}
-    .tag{padding:6px 8px; background:var(--glass); border-radius:8px; font-weight:600; font-size:12px}
-
-    /* About + Skills */
-    .two-col{display:grid; grid-template-columns:1fr 320px; gap:var(--gap); margin-bottom:32px}
-    .skills{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005)); padding:18px; border-radius:12px}
-    .skill-list{display:flex; gap:8px; flex-wrap:wrap}
-
-    /* Contact */
-    .contact-form{display:grid; gap:10px}
-    input, textarea{width:100%; padding:10px; border-radius:8px; background:transparent; border:1px solid rgba(255,255,255,0.04); color:inherit}
-
-    footer{margin-top:48px; color:var(--muted); text-align:center}
-
-    /* Responsive */
-    @media (max-width:880px){
-      .hero{grid-template-columns:1fr}
-      .two-col{grid-template-columns:1fr}
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <div class="container">
+  <header>
+    <nav class="navbar">
+      <div class="logo">Your Name</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <header>
-      <div class="brand">
-        <div class="logo">YN</div>
-        <div>
-          <div style="font-weight:800">Your Name</div>
-          <div style="font-size:13px;color:var(--muted)">Product Designer / Developer</div>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Hello, I'm <span class="accent">Your Name</span></h1>
+      <p>A creative designer & front-end developer passionate about thoughtful, human-centered digital experiences.</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I’m a multidisciplinary designer and developer who enjoys creating elegant, accessible web experiences.
+        My work combines visual design and functional development to produce clean, engaging interfaces.
+      </p>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2>Selected Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x250" alt="Project 1">
+          <h3>Project One</h3>
+          <p>A web app that simplifies task management through minimal design and intuitive UX.</p>
+          <a href="#" class="btn-secondary">View Project</a>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x250" alt="Project 2">
+          <h3>Project Two</h3>
+          <p>A responsive portfolio template optimized for performance and simplicity.</p>
+          <a href="#" class="btn-secondary">View Project</a>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/400x250" alt="Project 3">
+          <h3>Project Three</h3>
+          <p>An experimental visual design system inspired by geometric abstraction.</p>
+          <a href="#" class="btn-secondary">View Project</a>
         </div>
       </div>
+    </div>
+  </section>
 
-      <nav aria-label="Main navigation">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#writing">Writing</a>
-        <a href="#contact">Contact</a>
-        <a class="btn btn-ghost" href="/resume.pdf" download>Resume</a>
-      </nav>
-    </header>
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>If you’d like to work together or just say hello, feel free to reach out!</p>
+      <form class="contact-form" action="mailto:youremail@example.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
 
-    <main>
-      <section class="hero">
-        <div class="intro">
-          <h1>Hi — I’m Your Name.</h1>
-          <p class="lead">I build elegant, usable web products and visual experiments. I design interactions, ship frontend code, and write about design systems.</p>
-          <div class="cta">
-            <a class="btn btn-primary" href="#projects">See projects</a>
-            <a class="btn btn-ghost" href="#contact">Work together</a>
-          </div>
-
-          <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap">
-            <div style="background:var(--glass); padding:10px 12px; border-radius:10px; font-weight:700">Tokyo — Remote</div>
-            <div style="color:var(--muted); padding:10px 12px; border-radius:10px; background:transparent">Available for contract</div>
-          </div>
-        </div>
-
-        <aside class="side-card">
-          <div class="avatar">Your portrait or art</div>
-          <div class="meta">
-            <div>
-              <div style="font-weight:800">Open to hire</div>
-              <div style="font-size:13px;color:var(--muted)">Freelance / Full-time</div>
-            </div>
-            <div style="text-align:right">
-              <div style="font-weight:800">5+</div>
-              <div style="font-size:13px;color:var(--muted)">Years experience</div>
-            </div>
-          </div>
-        </aside>
-      </section>
-
-      <section id="projects" class="projects container">
-        <h2 style="margin-bottom:12px">Selected projects</h2>
-        <div class="projects-grid">
-
-          <!-- Project example: copy this card for each project -->
-          <article class="card">
-            <img src="https://via.placeholder.com/800x450.png?text=Project+1" alt="Screenshot of Project 1">
-            <h3>Project One — Small web app</h3>
-            <p>A short description of the project — what it does and why it matters.</p>
-            <div class="tags">
-              <div class="tag">React</div>
-              <div class="tag">Node</div>
-              <div class="tag">Accessibility</div>
-            </div>
-            <div style="margin-top:12px; display:flex; gap:8px">
-              <a class="btn btn-ghost" href="#" aria-label="Open project">Live</a>
-              <a class="btn btn-ghost" href="#" aria-label="Open source code">Code</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="https://via.placeholder.com/800x450.png?text=Project+2" alt="Screenshot of Project 2">
-            <h3>Project Two — Design system</h3>
-            <p>Design tokens, components and documentation site for an internal product.</p>
-            <div class="tags"><div class="tag">Design</div><div class="tag">Figma</div></div>
-            <div style="margin-top:12px; display:flex; gap:8px">
-              <a class="btn btn-ghost" href="#">Case study</a>
-              <a class="btn btn-ghost" href="#">Code</a>
-            </div>
-          </article>
-
-          <!-- add more project cards as needed -->
-
-        </div>
-      </section>
-
-      <section id="about" class="two-col container">
-        <div>
-          <h2>About</h2>
-          <p style="color:var(--muted)">I’m a designer-developer focused on product experiences, accessibility and scalable frontends. I enjoy pairing lean design with robust engineering and shipping complete features end-to-end.</p>
-
-          <h3 style="margin-top:18px">Process</h3>
-          <ol style="color:var(--muted)">
-            <li>Research & discovery</li>
-            <li>Sketches & low-fi prototypes</li>
-            <li>Component-driven implementation</li>
-            <li>Accessibility & performance tuning</li>
-          </ol>
-        </div>
-
-        <aside class="skills">
-          <h3>Skills</h3>
-          <div class="skill-list" style="margin-top:10px">
-            <div class="tag">HTML</div>
-            <div class="tag">CSS</div>
-            <div class="tag">JavaScript</div>
-            <div class="tag">React</div>
-            <div class="tag">Figma</div>
-            <div class="tag">TypeScript</div>
-            <div class="tag">Node</div>
-          </div>
-
-          <h3 style="margin-top:16px">Stats</h3>
-          <div style="color:var(--muted); font-size:13px">Built and maintained 8 production apps; contributor to 4 open-source packages.</div>
-        </aside>
-      </section>
-
-      <section id="writing" class="container" style="margin-bottom:32px">
-        <h2>Writing & thoughts</h2>
-        <p style="color:var(--muted)">Short excerpts or links to essays, case studies, or a blog. Use this space to link to longer case studies or an external blog.</p>
-        <ul style="color:var(--muted)">
-          <li><a href="#">On building accessible design systems</a></li>
-          <li><a href="#">Performance patterns I rely on</a></li>
-        </ul>
-      </section>
-
-      <section id="contact" class="container">
-        <h2>Contact</h2>
-        <p style="color:var(--muted)">I’m available for freelance and full-time roles. Say hello — I reply within a few days.</p>
-
-        <form class="contact-form" action="mailto:youremail@example.com" method="post" enctype="text/plain">
-          <input type="text" name="name" placeholder="Your name" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <textarea name="message" rows="6" placeholder="Tell me about the project..." required></textarea>
-          <div style="display:flex; gap:12px">
-            <button type="submit" class="btn btn-primary">Send</button>
-            <a class="btn btn-ghost" href="mailto:youremail@example.com">Email me</a>
-          </div>
-        </form>
-      </section>
-
-    </main>
-
-    <footer>
-      <div class="container">
-        <div style="margin-bottom:8px">© {new Date().getFullYear()} Your Name</div>
-        <div style="color:var(--muted); font-size:13px">Built with ❤️ — hosted on GitHub Pages</div>
-      </div>
-    </footer>
-  </div>
+  <footer>
+    <p>© <span id="year"></span> Your Name. Built with ❤️ — hosted on GitHub Pages.</p>
+  </footer>
 
   <script>
-    // Small helper: replace the placeholder year expression in the footer
-    document.querySelectorAll('footer').forEach(f=>{
-      f.innerHTML = f.innerHTML.replace('{new Date().getFullYear()}', new Date().getFullYear())
-    })
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
