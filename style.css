@@ -107,67 +107,70 @@ nav a::after {
   background: var(--accent);
   transition: width
 
-/* ===============================
-   Interactive Hover Effects
-=============================== */
+/* ==========================================
+   ✨ SAFE INTERACTION + HOVER ENHANCEMENTS
+   (Preserves layout and structure)
+========================================== */
 
-/* Smooth transitions for all hoverable items */
-a, button, .card {
-  transition: all 0.3s ease;
+/* Smooth transition for interactive items */
+a, button {
+  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+/* ===== Links ===== */
+a:hover {
+  color: var(--accent);
 }
 
 /* ===== Buttons ===== */
 .btn-primary:hover {
-  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
 }
 
-/* ===== Nav Links ===== */
+/* ===== Navbar Links ===== */
 .navbar a {
-  color: var(--muted);
   position: relative;
 }
 
 .navbar a::after {
   content: "";
   position: absolute;
-  bottom: -3px;
+  bottom: -4px;
   left: 0;
   width: 0%;
   height: 2px;
   background: var(--accent);
-  transition: width 0.3s ease;
+  transition: width 0.25s ease;
 }
 
 .navbar a:hover::after {
   width: 100%;
 }
 
-/* ===== Cards (Projects, Info) ===== */
+/* ===== Cards (Soft glow only) ===== */
 .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: var(--card);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.15);
+  transform: translateY(-3px);
 }
 
-/* ===== Skill Tags ===== */
+/* ===== Skill Tags or Small Buttons ===== */
+.skills span {
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
 .skills span:hover {
-  background: var(--accent);
-  color: white;
+  background-color: var(--accent);
+  color: #fff;
   transform: translateY(-2px);
-}
-
-/* Cursor pointer for interactive items */
-button, .btn-primary, .btn-secondary, .card, a {
-  cursor: pointer;
 }
