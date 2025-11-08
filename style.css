@@ -106,3 +106,68 @@ nav a::after {
   height: 2px;
   background: var(--accent);
   transition: width
+
+/* ===============================
+   Interactive Hover Effects
+=============================== */
+
+/* Smooth transitions for all hoverable items */
+a, button, .card {
+  transition: all 0.3s ease;
+}
+
+/* ===== Buttons ===== */
+.btn-primary:hover {
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ===== Nav Links ===== */
+.navbar a {
+  color: var(--muted);
+  position: relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* ===== Cards (Projects, Info) ===== */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--card);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* ===== Skill Tags ===== */
+.skills span:hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Cursor pointer for interactive items */
+button, .btn-primary, .btn-secondary, .card, a {
+  cursor: pointer;
+}
